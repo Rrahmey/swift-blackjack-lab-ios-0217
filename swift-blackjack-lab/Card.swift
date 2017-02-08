@@ -12,7 +12,7 @@ class Card {
     var suit: String
     var rank: String
     var cardLabel: String
-    var cardValue: Int?  //does this need to be an optional
+    var cardValue: UInt = 0
     var description: String {
         return cardLabel
     }
@@ -31,13 +31,13 @@ class Card {
     }
     
     func validRanks() -> [String] {
-        var validRanksArray = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+        let validRanksArray = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
         return validRanksArray
     }
     
     //assigning values to the cards 
-    func determineCardValue(rank:String)-> Int{
-        var theCardValue = Int()
+    func determineCardValue(rank:String)-> UInt{
+        var theCardValue = UInt()
         switch rank {
         case "A":
             theCardValue = 1
@@ -75,7 +75,7 @@ class Card {
 
 }
 
-func descriptionTwo(cardArray:[Card]) -> String {
+func descriptionFor(cardArray:[Card]) -> String {
     
     var hearts:[Card] = []
     var spades:[Card] = []
@@ -104,19 +104,19 @@ func descriptionTwo(cardArray:[Card]) -> String {
     
     
     // sort by rank and added to individual sentences
-    diamonds.sort { $0.cardValue! < $1.cardValue! }
+    diamonds.sort { $0.cardValue < $1.cardValue }
     for card in diamonds {
         diamondDescript += "\(card.description) "
     }
-    clubs.sort { $0.cardValue! < $1.cardValue! }
+    clubs.sort { $0.cardValue < $1.cardValue }
     for card in clubs {
         clubdescription += "\(card.description) "
     }
-    spades.sort { $0.cardValue! < $1.cardValue! }
+    spades.sort { $0.cardValue < $1.cardValue }
     for card in spades {
         spadedescript += "\(card.description) "
     }
-    hearts.sort { $0.cardValue! < $1.cardValue! }
+    hearts.sort { $0.cardValue < $1.cardValue }
     for card in hearts {
         heartdescript += "\(card.description) "
     }

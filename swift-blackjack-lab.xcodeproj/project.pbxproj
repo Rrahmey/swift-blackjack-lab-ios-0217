@@ -13,14 +13,11 @@
 		1B7BC4301D301D6D00454AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7BC42F1D301D6D00454AAB /* Assets.xcassets */; };
 		1B7BC4331D301D6D00454AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7BC4311D301D6D00454AAB /* LaunchScreen.storyboard */; };
 		1B7BC43E1D301D6D00454AAB /* swift_blackjack_labTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7BC43D1D301D6D00454AAB /* swift_blackjack_labTests.swift */; };
-		1B9BCBFE1D3023EC0080E45D /* PlayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BCBFD1D3023EC0080E45D /* PlayerSpec.swift */; };
-		1B9BCC0A1D3026F10080E45D /* HouseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BCC091D3026F10080E45D /* HouseSpec.swift */; };
-		1B9BCC0E1D3027320080E45D /* DeckSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BCC0D1D3027320080E45D /* DeckSpec.swift */; };
-		1B9BCC101D3027580080E45D /* DealerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BCC0F1D3027580080E45D /* DealerSpec.swift */; };
 		1B9BCC121D3027720080E45D /* CardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9BCC111D3027720080E45D /* CardSpec.swift */; };
 		27D170B89F7408C8EE2BCB9A /* Pods_swift_blackjack_labTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404F70BE083BCE33FAE30C91 /* Pods_swift_blackjack_labTests.framework */; };
 		9270B07079B11307409944C5 /* Pods_swift_blackjack_lab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A3AC27C31E30B3B95AF9D3 /* Pods_swift_blackjack_lab.framework */; };
 		D3828EFB1E4A7C3D0015BCDF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3828EFA1E4A7C3D0015BCDF /* Card.swift */; };
+		D39D4FA11E4B5D3F00D9C339 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39D4FA01E4B5D3F00D9C339 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +52,7 @@
 		77283629B29EE8024C1AD065 /* Pods-swift-blackjack-labTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-blackjack-labTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swift-blackjack-labTests/Pods-swift-blackjack-labTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1A3AC27C31E30B3B95AF9D3 /* Pods_swift_blackjack_lab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swift_blackjack_lab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3828EFA1E4A7C3D0015BCDF /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D39D4FA01E4B5D3F00D9C339 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		E9D57171BEE7284327A5795C /* Pods-swift-blackjack-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-blackjack-lab.release.xcconfig"; path = "Pods/Target Support Files/Pods-swift-blackjack-lab/Pods-swift-blackjack-lab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +102,7 @@
 				1B7BC4281D301D6C00454AAB /* AppDelegate.swift */,
 				1B7BC42A1D301D6D00454AAB /* ViewController.swift */,
 				D3828EFA1E4A7C3D0015BCDF /* Card.swift */,
+				D39D4FA01E4B5D3F00D9C339 /* Deck.swift */,
 				1B7BC42C1D301D6D00454AAB /* Main.storyboard */,
 				1B7BC42F1D301D6D00454AAB /* Assets.xcassets */,
 				1B7BC4311D301D6D00454AAB /* LaunchScreen.storyboard */,
@@ -202,6 +201,7 @@
 				TargetAttributes = {
 					1B7BC4241D301D6C00454AAB = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 56S3PA4JK8;
 						LastSwiftMigration = 0800;
 					};
 					1B7BC4381D301D6D00454AAB = {
@@ -348,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39D4FA11E4B5D3F00D9C339 /* Deck.swift in Sources */,
 				1B7BC42B1D301D6D00454AAB /* ViewController.swift in Sources */,
 				D3828EFB1E4A7C3D0015BCDF /* Card.swift in Sources */,
 				1B7BC4291D301D6C00454AAB /* AppDelegate.swift in Sources */,
@@ -358,12 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B9BCC0A1D3026F10080E45D /* HouseSpec.swift in Sources */,
-				1B9BCC101D3027580080E45D /* DealerSpec.swift in Sources */,
 				1B9BCC121D3027720080E45D /* CardSpec.swift in Sources */,
 				1B7BC43E1D301D6D00454AAB /* swift_blackjack_labTests.swift in Sources */,
-				1B9BCBFE1D3023EC0080E45D /* PlayerSpec.swift in Sources */,
-				1B9BCC0E1D3027320080E45D /* DeckSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +489,9 @@
 			baseConfigurationReference = 43357FF39272C5EE2B29D509 /* Pods-swift-blackjack-lab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56S3PA4JK8;
 				INFOPLIST_FILE = "swift-blackjack-lab/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.com.swift-blackjack-lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,7 +504,9 @@
 			baseConfigurationReference = E9D57171BEE7284327A5795C /* Pods-swift-blackjack-lab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 56S3PA4JK8;
 				INFOPLIST_FILE = "swift-blackjack-lab/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.com.swift-blackjack-lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
