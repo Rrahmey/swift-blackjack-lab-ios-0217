@@ -26,7 +26,7 @@ class Card {
     }
     
     func validSuits() -> [String] {
-        let validSuits = ["♠️","♣️","♥️","♦️"]
+        let validSuits = ["♠︎","♣︎","♥︎","♦︎"]
         return validSuits
     }
     
@@ -60,11 +60,11 @@ class Card {
         case "10":
             theCardValue = 10
         case "J":
-            theCardValue = 11
+            theCardValue = 10
         case "Q":
-            theCardValue = 12
+            theCardValue = 10
         case "K":
-            theCardValue = 13
+            theCardValue = 10
         default:
             print("That is not a value")
         }
@@ -91,11 +91,11 @@ func descriptionFor(cardArray:[Card]) -> String {
     // sort into suits
     for card in cardArray {
         switch card.suit {
-        case "♥️":
+        case "♥︎":
             hearts.append(card)
-        case "♠️":
+        case "♣︎":
             spades.append(card)
-        case "♦️":
+        case "♦︎":
             diamonds.append(card)
         default:
             clubs.append(card)

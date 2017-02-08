@@ -13,7 +13,13 @@ class Deck {
     var undealtCard:[Card] = []
     var dealtCards: [Card] = []
     var description: String {
-        return "The number of cards remaining is \(undealtCard.count) and the cards are \(descriptionFor(cardArray: undealtCard)) \n The number of cards dealt is \(dealtCards) and the cards are \(descriptionFor(cardArray: dealtCards))"
+        var cardDescrip = ""
+        if dealtCards.isEmpty {
+            cardDescrip = "Cards Remaining: \(undealtCard.count) and the cards are \(descriptionFor(cardArray: undealtCard)) and Cards Dealt: 0"
+        } else {
+            cardDescrip =  "Cards Remaining: \(undealtCard.count) and the cards are \(descriptionFor(cardArray: undealtCard)) \n The number of cards dealt is \(dealtCards) and the cards are \(descriptionFor(cardArray: dealtCards))"
+        }
+        return cardDescrip
     }
     
     init () {
@@ -24,11 +30,9 @@ class Deck {
     
     //Fills a new variable with a brand new deck
     func fillCardDeck() -> [Card]{
+        let suits = ["♣︎","♠︎","♥︎","♦︎"]
+        let ranks = ["K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2", "A"]
         
-    var undealtCard: [Card] = []
-    let suits = ["♠️","♣️","♥️","♦️"]
-    let ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-    
         for rank in ranks {
             for suit in suits {
                 undealtCard.append(Card(suit:"\(suit)", rank: "\(rank)"))
@@ -37,27 +41,31 @@ class Deck {
         return undealtCard
     }
     
-    func drawcard() -> Card{
-        dealtCards.insert(undealtCard[0], at: 0)
-        undealtCard.remove(at: 0)
-        return dealtCards[0]
-    }
-
-    
-    func shuffle(dealtcard: [Card]) -> [Card]{
-        var dealtCards = dealtcard
-        undealtCard = []
-        for card in dealtCards {
-            let randomNumber:Int = Int(arc4random_uniform(UInt32(dealtCards.count)))
-            let grabbedCard:Card = dealtCards[randomNumber]
-            undealtCard.append(grabbedCard)
-            dealtCards.remove(at: randomNumber)
+    func drawCard() -> Card{
+        if undealtCard.isEmpty != true {
+            dealtCards.insert(undealtCard[0], at: 0)
+            undealtCard.remove(at: 0)
         }
-        return undealtCard
+        return dealtCards[0]
+        
     }
     
+    
+    func shuffle() {
+        var gatheredCards = undealtCard + dealtCards
+        undealtCard = []
+        let cardCount = gatheredCards.count - 1
+        for i in 0...cardCount  {
+            let randomNumber: Int = Int(arc4random_uniform(UInt32(((gatheredCards.count-1)))))
+            let grabbedCard:Card = gatheredCards[randomNumber]
+            undealtCard.append(grabbedCard)
+            gatheredCards.remove(at: randomNumber)
+        }
+    }
 
-
+    
+    
+    
     
     
 }
