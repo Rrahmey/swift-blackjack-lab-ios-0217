@@ -6,12 +6,17 @@
 //  Copyright © 2016 Flatiron School. All rights reserved.
 //
 
+//In AppDelegate.swift, add a Dealer property called dealer.
+//Write a method called playBlackjack(withBet:) that calls the different steps in the game in order. The player and house should be offered a maximum of five cards total.
+//Add print() statements utilizing the description properties that you wrote in order to build a readout of the game as it progresses.
+
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    
     
     /**
      
@@ -36,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      * Write your playBlackjack method in here
      
      */
+   
     
 }
 
